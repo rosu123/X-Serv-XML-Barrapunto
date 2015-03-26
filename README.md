@@ -3,4 +3,6 @@ Gestor de contenidos con titulares de BarraPunto versión Django
 
 ## Enunciado
 
-Realiza una aplicación Django con la misma funcionalidad que ``Django cms'', pero que devuelva para cada recurso para el cuál tenga un contenido asociado en su tabla de la base de datos una página que incluirá el contenido en cuestión, y los titulares de BarraPunto (para cada uno, título y URL). Detalles del enunciado en el programa de la asignatura.
+Descargar el fichero RSS de [BarraPunto](http://barrapunto.com) , y construir un programa que produzca como salida sus titulares en una página HTML. Si se carga esa página en un navegador, picando sobre un titular, el navegador deberá cargar la página de BarraPunto con la noticia correspondiente. Como base puede usarse lo aprendido estudiando los programas xml-parser-jokes.py y xml-parser-barrapunto.py.
+
+Detalles del enunciado en el programa de la asignatura.
