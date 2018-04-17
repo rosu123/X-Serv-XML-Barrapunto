@@ -69,7 +69,7 @@ theParser.setContentHandler(theHandler)
 
 # Ready, set, go!
 
-print("<!DOCTYPE html><html><body>\n<ul>")
+print("<!DOCTYPE html><html><body><h1>Lista de artículos</h1>\n<ul>")
 urlToParse = "http://barrapunto.com/index.rss"
 xmlURL = request.urlopen(urlToParse)
 theParser.parse(xmlURL)
