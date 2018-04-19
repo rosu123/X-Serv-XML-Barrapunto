@@ -43,9 +43,10 @@ class myContentHandler(ContentHandler):
                 self.inContent = False
                 self.theContent = ""
             elif name == 'link':
-                #print (" Link: " + self.theContent)
                 link = "<li><a href='" + self.theContent + "'>" + self.line + "</a></li><br/>"
-                print(" Title: " + link)
+                html_file = open("ejemplo.html","a")
+                html_file.write(link)
+                html_file.close()
                 self.inContent = False
                 self.theContent = ""
 
@@ -68,9 +69,12 @@ theHandler = myContentHandler()
 theParser.setContentHandler(theHandler)
 
 # Ready, set, go!
-
-print("<!DOCTYPE html><html><body><h1>Lista de artículos</h1>\n<ul>")
+html_file = open("ejemplo.html","w")
+html_file.write("<!DOCTYPE html><html><body><meta charset='utf-8'/><h1>Lista de artículos</h1>\n<ul>")
+html_file.close()
 urlToParse = "http://barrapunto.com/index.rss"
 xmlURL = request.urlopen(urlToParse)
 theParser.parse(xmlURL)
-print("</ul></body></html>")
+html_file = open("ejemplo.html","a")
+html_file.write("</ul></body></html>")
+html_file.close()
